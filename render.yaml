@@ -1,10 +1,7 @@
-services:
-  - type: web
-    name: telegram-hours-bot
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
-    envVars:
-      - key: GOOGLE_APPLICATION_CREDENTIALS
-        value: greencities-bot-7c443d6af869.json
+type: web
+name: telegram-hours-bot
+env: python
+plan: free
+pythonVersion: 3.10
+buildCommand: pip install -r requirements.txt
+startCommand: python main.py
